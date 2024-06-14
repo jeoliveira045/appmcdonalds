@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">app-mcdonalds</string>
+    <string name="big_tasty">Big Tasty</string>
+    <string name="doublecheeseburger">Double Cheeseburger</string>
+    <string name="mcchicken">Mc Chicken</string>
+    <string name="cheeseburger">Cheeseburger</string>
+    <string name="combo_classicos_dois_sanduiches_batata_bebida">Combo dos Clássicos</string>
+    <string name="dois_sanduiches_desconto">Dois sanduíches com desconto</string>
+    <string name="coca_mcmelt_46">Cheddar MecMelt + Bebida 500ml</string>
+    <string name="mc_oferta_big_tasty_turbo_queijo">Mc Oferta Média Big Tasty Turbo Queijo</string>
+</resources>
