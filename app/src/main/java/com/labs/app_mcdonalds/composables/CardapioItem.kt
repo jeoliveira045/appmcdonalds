@@ -69,7 +69,7 @@ fun CardapioItem(
             )
             Column(
                 verticalArrangement = Arrangement.SpaceAround,
-                modifier = modifier.height(80.dp)
+                modifier = modifier.height(80.dp).padding(4.dp)
             ){
                 Text(
                     text = stringResource(id = text),
