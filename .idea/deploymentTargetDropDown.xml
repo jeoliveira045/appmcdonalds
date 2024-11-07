@@ -5,10 +5,16 @@
       <entry key="BoxesLabPreview">
         <State />
       </entry>
-      <entry key="CardapioItemPreview">
+      <entry key="CardapioListaPreview">
         <State />
       </entry>
-      <entry key="CardapioListaPreview">
+      <entry key="DetalheItemOptionsPreview">
+        <State />
+      </entry>
+      <entry key="GuardanaposOptionsPreview">
+        <State />
+      </entry>
+      <entry key="YesOrNoOptionPreview">
         <State />
       </entry>
       <entry key="app">

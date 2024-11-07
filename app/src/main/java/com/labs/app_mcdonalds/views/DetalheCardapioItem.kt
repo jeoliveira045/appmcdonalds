@@ -25,6 +25,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.labs.app_mcdonalds.composables.MultipleOptions
+import com.labs.app_mcdonalds.composables.YesOrNoOption
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -46,6 +48,7 @@ fun DetalheCardapioItem(
             )
         }
     ) {paddingValues ->
+
         Column(
             modifier = modifier.padding(paddingValues),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -64,7 +67,20 @@ fun DetalheCardapioItem(
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold
             )
+            YesOrNoOption(question = "Deseja Guardanapos?")
+            MultipleOptions(checkbox = true, questionList = QuestionList)
+
 
         }
     }
 }
+
+var QuestionList: List<String> = mutableListOf(
+    "Tomate",
+    "Picles",
+    "Cebola",
+    "Carne Especial McDonalds"
+)
+
+//@Composable
+//fun

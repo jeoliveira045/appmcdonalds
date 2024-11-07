@@ -57,6 +57,13 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
+    implementation(libs.ktor.serializaiton)
+    implementation(libs.ktor.content.negotiation)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.core)
+    implementation("io.ktor:ktor-client-okhttp:2.2.0") // Cliente Ktor com OkHttp para Android
+    implementation("io.ktor:ktor-client-content-negotiation:2.2.0") // Plugin para serialização
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.2.0")
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation)

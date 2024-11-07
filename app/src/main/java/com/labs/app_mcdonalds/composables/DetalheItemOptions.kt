@@ -3,7 +3,6 @@ package com.labs.app_mcdonalds.composables
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -28,7 +27,11 @@ import com.labs.app_mcdonalds.R
 import com.labs.app_mcdonalds.ui.theme.AppmcdonaldsTheme
 
 @Composable
-fun DetalheItemOptions(text: String, @DrawableRes image: Int, modifier: Modifier = Modifier) {
+fun DetalheItemOptions(
+    text: String,
+//    @DrawableRes image: Int,
+    checkbox: Boolean = false,
+    modifier: Modifier = Modifier) {
     var checked by rememberSaveable {
         mutableStateOf(false)
     }
@@ -51,23 +54,25 @@ fun DetalheItemOptions(text: String, @DrawableRes image: Int, modifier: Modifier
                 horizontalArrangement = Arrangement.Start,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Image(painter = painterResource(id = image),
-                      modifier = modifier.size(90.dp),
-                      contentDescription = null
-                )
+//                Image(painter = painterResource(id = image),
+//                      modifier = modifier.size(90.dp),
+//                      contentDescription = null
+//                )
                 Text(text = text, modifier.padding(start = 30.dp))
             }
-            RadioButton(selected = checked, onClick  = {
-                checked = !checked
-            })
+            if(checkbox){
+                Checkbox(checked = checked, onCheckedChange = { checked = it})
+            }else {
+                RadioButton(selected = checked, onClick = { checked = !checked })
+            }
         }
     }
 }
 
-@Preview
-@Composable
-fun DetalheItemOptionsPreview(){
-    AppmcdonaldsTheme {
-        DetalheItemOptions(text = "Levar guardanapos", image = R.drawable.napkins)
-    }
-}
+//@Preview
+//@Composable
+//fun DetalheItemOptionsPreview(){
+//    AppmcdonaldsTheme {
+//        DetalheItemOptions(text = "Levar guardanapos", image = R.drawable.napkins)
+//    }
+//}
